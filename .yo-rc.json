@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.4.1",
+    "libraryName": "partner-portal",
+    "libraryId": "e7e8fceb-e637-40fa-8e28-e8173521b786",
+    "environment": "spo"
+  }
+}

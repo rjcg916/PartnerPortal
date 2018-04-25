@@ -1,0 +1,12 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "partner-portal-client-side-solution",
+    "id": "e7e8fceb-e637-40fa-8e28-e8173521b786",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/partner-portal.sppkg"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "91b6b67a-a66b-497b-8bae-35128983256d",
+  "alias": "PartnerInfoWebPart",
+  "componentType": "WebPart",
+
+  
+  "version": "*",
+  "manifestVersion": 2,
+
+
+  "requiresCustomScript": false,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
+    "group": { "default": "Other" },
+    "title": { "default": "Partner Program Information" },
+    "description": { "default": "Display Basic Partner and Program Participation Information" },
+    "officeFabricIconFontName": "ContactInfo",
+    "properties": {
+      "listName": "Partners"
+    }
+  }]
+}

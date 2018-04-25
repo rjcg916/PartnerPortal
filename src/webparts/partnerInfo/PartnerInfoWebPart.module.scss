@@ -1,0 +1,62 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.partnerInfo {
+
+  .container {
+    max-width: 700px;
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themePrimary;
+  
+  }
+
+  .programs {
+    @include ms-Grid-col;
+    @include ms-md8;
+    @include ms-sm12;
+    margin-top: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+      }
+  .column {
+    @include ms-Grid-col;
+    @include ms-md4;
+    @include ms-sm12;    
+  }
+
+  .title {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+    margin-bottom: 10px;
+  }
+  
+  .subTitle {
+    @include ms-font-s;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-m;
+    @include ms-fontColor-white;
+  }
+
+  .logoTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white; 
+    margin: 10px;
+  }
+
+  .img {
+    align-content: left;
+  }  
+
+}

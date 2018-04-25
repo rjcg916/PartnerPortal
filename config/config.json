@@ -1,0 +1,27 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "partner-info-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/partnerInfo/PartnerInfoWebPart.js",
+          "manifest": "./src/webparts/partnerInfo/PartnerInfoWebPart.manifest.json"
+        }
+      ]
+    },
+    "discussions-info-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/discussionsInfo/DiscussionsInfoWebPart.js",
+          "manifest": "./src/webparts/discussionsInfo/DiscussionsInfoWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PartnerInfoWebPartStrings": "lib/webparts/partnerInfo/loc/{locale}.js",
+    "DiscussionsInfoWebPartStrings": "lib/webparts/discussionsInfo/loc/{locale}.js"
+  }
+}

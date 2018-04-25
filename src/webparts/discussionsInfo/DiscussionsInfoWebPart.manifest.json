@@ -1,0 +1,23 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "5c770f2b-5d95-459b-acf2-9a1c63177eea",
+  "alias": "DiscussionsInfoWebPart",
+  "componentType": "WebPart",
+
+  
+  "version": "*",
+  "manifestVersion": 2,
+
+ "requiresCustomScript": false,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
+    "group": { "default": "Other" },
+    "title": { "default": "Partner Discussions" },
+    "description": { "default": "Display discussion topics, recent posts, and link to formums." },
+    "officeFabricIconFontName": "Comment",
+    "properties": {
+      "description": "Discussions Info"
+    }
+  }]
+}
