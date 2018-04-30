@@ -14,10 +14,10 @@
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
     "group": { "default": "Other" },
     "title": { "default": "Partner Discussions" },
-    "description": { "default": "Display discussion topics, recent posts, and link to formums." },
+    "description": { "default": "Displays discussion topics, recent posts, and link to formums." },
     "officeFabricIconFontName": "Comment",
     "properties": {
-      "description": "Discussions Info"
-    }
+      "listName": "Discussions"
+ }
   }]
 }

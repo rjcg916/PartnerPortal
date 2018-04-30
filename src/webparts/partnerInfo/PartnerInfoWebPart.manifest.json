@@ -15,7 +15,7 @@
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
     "group": { "default": "Other" },
     "title": { "default": "Partner Program Information" },
-    "description": { "default": "Display Basic Partner and Program Participation Information" },
+    "description": { "default": "Displays Formatted Partner and Program Participation Information" },
     "officeFabricIconFontName": "ContactInfo",
     "properties": {
       "listName": "Partners"

@@ -7,10 +7,13 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
   }
 
+  .topic { margin:5px
+  }
+
   .row {
     @include ms-Grid-row;
     @include ms-fontColor-white;
-    background-color: $ms-color-themeDark;
+    background-color: $ms-color-themePrimary;
     padding: 20px;
   }
 
@@ -44,8 +47,8 @@
 
     // Primary Button
     min-width: 80px;
-    background-color: $ms-color-themePrimary;
-    border-color: $ms-color-themePrimary;
+    background-color: $ms-color-themeDark;
+    border-color: $ms-color-themeDark;
     color: $ms-color-white;
 
     // Basic Button
@@ -71,4 +74,5 @@
       display: inline-block;
     }
   }
+
 }

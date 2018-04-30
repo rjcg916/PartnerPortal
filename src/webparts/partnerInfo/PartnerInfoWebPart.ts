@@ -30,14 +30,14 @@ export interface IPartners {
 }
 
 export interface PartnerContactProfile {
-  Title: string,
-  EMail: string,
+  Title: string;
+  EMail: string;
   WorkPhone: string;
 }
 
 export interface PartnerContact {
-  FullName: string,
-  Email: string,
+  FullName: string;
+  Email: string;
   WorkPhone: string;
 }
 
@@ -80,7 +80,7 @@ export default class PartnerInfoWebPart extends BaseClientSideWebPart<IPartnerIn
   private formatDate(s)
   {     
      var d = new Date(s);
-     return (d.getMonth() + 1) + "/" + d.getDay() + "/" + d.getFullYear()
+     return (d.getMonth() + 1) + "/" + d.getDay() + "/" + d.getFullYear();
   }
 
   private _renderPartners(items: IPartner[]): void {
@@ -92,8 +92,8 @@ export default class PartnerInfoWebPart extends BaseClientSideWebPart<IPartnerIn
 
     if (item.Logo != null ) {
     html += `
-    <div class="${ styles.img} ${styles.column}">
-     <img src=${item.Logo.Url} >
+    <div class="${styles.column}">
+     <img class="${ styles.img}" src=${item.Logo.Url} >
     </div>`;
   } else {
     html += `    
@@ -104,12 +104,10 @@ export default class PartnerInfoWebPart extends BaseClientSideWebPart<IPartnerIn
 
      
 html += `
-
-
 <div class="${ styles.programs}">
  <div>
   <div class="${ styles.title}">Participant in: 
-  <span class="${ styles.subTitle}"> ${item.ProgramParticipation.map(function (element) {
+  <span class="${ styles.subTitle}"> ${item.ProgramParticipation.map((element) => {
         return element.Title;
       }).toString()}</span> </div>
    </div>
@@ -151,9 +149,9 @@ html += `
 <div class="${ styles.column}">
 <ul >
 <li  class="${ styles.title}">Partnership Relationship Manager</li>
-  <li class="${ styles.subTitle}"> ${item.BusinessDevelopmentManagerContac.FullName} </li>
-  <li class="${ styles.subTitle}"> ${item.BusinessDevelopmentManagerContac.Email}</li>
-  <li class="${ styles.subTitle}"> ${item.BusinessDevelopmentManagerContac.WorkPhone}</li>
+  <li class="${ styles.subTitle}"> ${ item.BusinessDevelopmentManagerContac.FullName} </li>
+  <li class="${ styles.subTitle}"> ${ this.formatEmail( item.BusinessDevelopmentManagerContac.Email)}</li>
+  <li class="${ styles.subTitle}"> ${ this.formatPhoneNumber( item.BusinessDevelopmentManagerContac.WorkPhone)}</li>
 </ul>
   </div>
   
@@ -161,8 +159,8 @@ html += `
     <ul >
      <li class="${ styles.title}">Partner Engagement Manager</li>
      <li class="${ styles.subTitle}"> ${item.ProgramEngagementManagerContact.FullName}</li>
-     <li class="${ styles.subTitle}"> ${item.ProgramEngagementManagerContact.Email}</li>
-     <li class="${ styles.subTitle}"> ${item.ProgramEngagementManagerContact.WorkPhone}</li>
+     <li class="${ styles.subTitle}"> ${ this.formatEmail( item.ProgramEngagementManagerContact.Email)}</li>
+     <li class="${ styles.subTitle}"> ${ this.formatPhoneNumber( item.ProgramEngagementManagerContact.WorkPhone)}</li>
     </ul>
      </div>
 
@@ -186,7 +184,7 @@ html += `
 
   private _getPartnersData(): Promise<IPartners> {
     return this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl +
-      `/_api/web/lists/GetByTitle('${this.properties.listName}')/items?$select=Title,Logo,PartnerType,PartnershipStartDate,PartnershipRenewalDate,
+      `/_api/web/lists/GetByTitle('${this.properties.listName}')/items?$select=Title,Logo,PartnerType,PartnershipStartDate,PartnershipRenewalDate,WorkAddress,
       BusinessDevelopmentExecutivePers/Title,BusinessDevelopmentExecutivePers/EMail,BusinessDevelopmentExecutivePers/WorkPhone,   
       ProgramEngagementManagerPerson/Title,ProgramEngagementManagerPerson/EMail,ProgramEngagementManagerPerson/WorkPhone,
     BusinessDevelopmentManagerContac/FullName,BusinessDevelopmentManagerContac/Email,BusinessDevelopmentManagerContac/WorkPhone,
